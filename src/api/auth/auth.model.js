@@ -5,20 +5,15 @@ const { Schema } = mongoose;
 //created model(Schema) for the User collection in database
 const UserSchema = new Schema({
     //fields to be added in collection
-    uid: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     userName: {
         type: String,
         required: true
     },
-    firstName:{
+    firstName: {
         type: String,
         required: true
     },
-    lastName:{
+    lastName: {
         type: String,
         required: true
     },
@@ -33,4 +28,4 @@ const UserSchema = new Schema({
 });
 
 //exporting the model module
-module.exports = mongoose.model('users', UserSchema)
+export const Users = mongoose.model('users', UserSchema)
